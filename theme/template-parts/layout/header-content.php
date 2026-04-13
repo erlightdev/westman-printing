@@ -42,7 +42,7 @@ function westman_printing_the_fallback_menu($args)
 ?>
 
 <!-- Added more responsive padding for a smoother transition across breakpoints -->
-<header id="masthead" class="relative z-50 w-full px-4 py-3 sm:px-6 lg:px-8 border-b md:border-0 border-slate-300 md:border-none" style="--brand-color: <?php echo esc_attr($Brand_Color); ?>;" x-data="{ menuOpen: false }">
+<header id="masthead" class="relative lg:absolute z-50 w-full px-4 py-3 sm:px-6 lg:px-8 border-b md:border-0 border-slate-300 md:border-none" style="--brand-color: <?php echo esc_attr($Brand_Color); ?>;" x-data="{ menuOpen: false }">
 	<!-- Using a standard max-width container for better consistency on large screens -->
 	<div class="relative mx-auto flex w-full max-w-7xl items-center gap-4">
 

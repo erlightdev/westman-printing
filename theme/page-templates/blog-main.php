@@ -10,8 +10,17 @@
  */
 get_header();
 ?>
-<main id="primary" class="site-main mx-auto max-w-7xl px-4 py-12">
-    <h1>Blog Main</h1>
+<main id="primary" class="site-main overflow-hidden">
+    <!-- Page Hero Section -->
+    <section>
+        <?php westman_printing_hero_section(
+            array(
+                'title'    => __('Blog', 'westman-printing'),
+                'subtitle' => __('Latest news and updates from our team.', 'westman-printing'),
+            )
+        ); ?>
+    </section>
+    <!-- End Page Hero Section -->
 </main>
 
 <?php

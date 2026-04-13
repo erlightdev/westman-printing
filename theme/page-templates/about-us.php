@@ -10,8 +10,15 @@
  */
 get_header();
 ?>
-<main id="primary" class="site-main mx-auto max-w-7xl px-4 py-12">
-    <h1>Custom About Us</h1>
+<main id="primary" class="site-main overflow-hidden">
+    <!-- Page Hero Section -->
+    <?php westman_printing_hero_section(
+        array(
+            'title'    => __('About Us', 'westman-printing'),
+            'subtitle' => __('Your trusted partner for reliable, high-quality printing, packaging, and promotional solutions.', 'westman-printing'),
+        )
+    ); ?>
+    <!-- End Page Hero Section -->
     <section x-data="{ count: 0 }" class="space-y-4">
         <p>This is a custom about us page.</p>
 

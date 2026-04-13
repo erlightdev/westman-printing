@@ -222,6 +222,7 @@ add_filter('register_block_type_args', 'westman_printing_modify_heading_levels',
  */
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/component/button/button.php';
+require get_template_directory() . '/component/hero/hero.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
