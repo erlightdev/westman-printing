@@ -10,7 +10,7 @@
  */
 get_header();
 ?>
-<main id="primary" class="site-main">
+<main id="primary" class="site-main mx-auto max-w-7xl px-4 py-12">
     <h1>Custom About Us</h1>
     <section x-data="{ count: 0 }" class="space-y-4">
         <p>This is a custom about us page.</p>
