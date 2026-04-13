@@ -97,7 +97,7 @@ function westman_printing_the_fallback_menu($args)
 		</div>
 
 		<!-- Desktop "Request a Quotes" Button: Standardized font, line-height, and sizing -->
-		<div class="hidden shrink-0 lg:block">
+		<div class="lg:block flex min-h-18 w-auto rounded-full bg-white p-2 lg:shadow-sm lg:ring-1 lg:ring-black/5 md:p-1">
 			<?php westman_printing_button(
 				array(
 					'tag'        => 'a',
