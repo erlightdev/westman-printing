@@ -8,3 +8,10 @@
  * For esbuild documentation, please see:
  * https://esbuild.github.io/
  */
+
+// Alpinejs
+import Alpine from 'alpinejs'
+ 
+window.Alpine = Alpine
+ 
+Alpine.start()
