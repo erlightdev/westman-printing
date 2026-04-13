@@ -12,7 +12,28 @@ $westman_printing_logo_url     = get_template_directory_uri() . '/assets/westman
 $westman_printing_footer_links = 'flex flex-col gap-3 text-base leading-6 text-gray-900 [&_a]:text-gray-900 [&_a]:no-underline [&_a]:transition-colors [&_a]:duration-200 [&_a:hover]:text-sky-700';
 ?>
 
-<footer id="colophon" class="w-full bg-white px-4 pt-12 sm:px-6 sm:pt-14 md:px-8 lg:px-12 lg:pt-16 xl:px-20 2xl:px-[165px] 2xl:pt-[70px]">
+<footer id="colophon" class="w-full bg-white px-4 pt-12 sm:px-6 sm:pt-14 md:px-8 lg:px-12 lg:pt-16 xl:px-20 2xl:px-[165px] 2xl:pt-[70px] overflow-hidden">
+	<!-- Cta Section -->
+	<div class="relative left-1/2 right-1/2 -mx-[50vw] mb-12 flex min-h-40 w-screen items-center overflow-hidden bg-[#002469] px-4 py-10 sm:px-6 md:px-8 lg:mb-16 lg:px-12 xl:px-20 2xl:mb-[70px]">
+		<div class="pointer-events-none absolute -left-28 top-1/2 size-72 -translate-y-1/2 rounded-full bg-[#001a3f] sm:-left-36 sm:size-96 lg:-left-48 lg:size-[32rem]"></div>
+		<div class="pointer-events-none absolute -right-28 top-1/2 size-72 -translate-y-1/2 rounded-full bg-[#001a3f] sm:-right-36 sm:size-96 lg:-right-48 lg:size-[32rem]"></div>
+
+		<div class="relative z-10 mx-auto flex w-full max-w-[1320px] flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+			<h2 class="text-3xl font-medium leading-tight tracking-normal text-white sm:text-4xl lg:text-5xl">
+				<?php esc_html_e('Ready to Start ?', 'westman-printing'); ?>
+			</h2>
+
+			<a href="<?php echo esc_url(home_url('/contact-us/')); ?>" class="flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-white py-1 pr-1 pl-4 text-base font-medium leading-6 text-sky-700 no-underline transition-colors duration-200 hover:text-sky-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#002469]">
+				<span class="whitespace-nowrap"><?php esc_html_e('Contact Us', 'westman-printing'); ?></span>
+				<span class="flex size-[42px] shrink-0 items-center justify-center rounded-full bg-[#64a1d1] text-white">
+					<svg class="size-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</span>
+			</a>
+		</div>
+	</div>
+	<!-- End Cta Section -->
 	<div class="mx-auto flex w-full max-w-[1400px] flex-col gap-12 lg:gap-16 2xl:gap-[68px]">
 		<div class="grid w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[minmax(0,1.15fr)_minmax(10rem,0.45fr)_minmax(18rem,0.85fr)] lg:gap-12 xl:gap-20 2xl:gap-28">
 			<div class="flex flex-col items-start gap-6">
@@ -60,12 +81,12 @@ $westman_printing_footer_links = 'flex flex-col gap-3 text-base leading-6 text-g
 				<?php
 				if (has_nav_menu('menu-2')) {
 					wp_nav_menu(
-						array(
+						[
 							'theme_location' => 'menu-2',
 							'menu_class'     => $westman_printing_footer_links,
 							'container'      => false,
 							'depth'          => 1,
-						)
+						]
 					);
 				} else {
 				?>
@@ -92,15 +113,15 @@ $westman_printing_footer_links = 'flex flex-col gap-3 text-base leading-6 text-g
 					<label for="westman-footer-email" class="text-sm font-medium leading-4 text-gray-700"><?php esc_html_e('Email', 'westman-printing'); ?></label>
 					<input id="westman-footer-email" name="westman-footer-email" type="email" autocomplete="email" placeholder="<?php esc_attr_e('Enter your email address', 'westman-printing'); ?>" class="h-9 w-full border-0 border-b border-slate-200 bg-transparent px-2 py-2 text-sm leading-4 text-gray-900 placeholder:text-gray-400 focus:border-sky-700 focus:ring-0" />
 					<?php westman_printing_button(
-array(
-'tag'        => 'button',
-'type'       => 'submit',
-'text'       => __( 'Stay Connected', 'westman-printing' ),
-'icon'       => true,
-'class'      => 'mt-1 cursor-pointer py-1 pr-1 pl-4',
-'aria_label' => __( 'Stay Connected', 'westman-printing' ),
-)
-); ?>
+						[
+							'tag'        => 'button',
+							'type'       => 'submit',
+							'text'       => __('Stay Connected', 'westman-printing'),
+							'icon'       => true,
+							'class'      => 'mt-1 cursor-pointer py-1 pr-1 pl-4',
+							'aria_label' => __('Stay Connected', 'westman-printing'),
+						]
+					); ?>
 				</form>
 			</div>
 		</div>
